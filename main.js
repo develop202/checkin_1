@@ -24,11 +24,12 @@ const glados = async () => {
       `Left Days ${Number(status.data.leftDays)}`,
     ]
   } catch (error) {
-    return [
-      'Checkin Error',
+    console.error(
+      '签到失败，请检查',
       `${error}`,
       `<${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}>`,
-    ]
+    )
+    throw new error()
   }
 }
 
