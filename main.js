@@ -19,6 +19,8 @@ const glados = async () => {
     return [
       'Checkin OK',
       `${checkin.message}`,
+      `本次签到获得积分：${checkin.list[0].change}`,
+      `当前账户积分总数：${checkin.list[0].balance}`,
       `Left Days ${Number(status.data.leftDays)}`,
     ]
   } catch (error) {
