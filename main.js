@@ -29,7 +29,7 @@ const glados = async () => {
       `${error}`,
       `<${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}>`,
     )
-    throw new error()
+    throw error
   }
 }
 
